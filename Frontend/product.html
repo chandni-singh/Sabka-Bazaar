@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<link lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sabka Bazaar Shopping site">
+    <title>Sabka Bazaar</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"></link>
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+    <!-- Custom style sheets -->
+    <link href="product.css" rel="stylesheet"></link>
+    <!-- <link href="cart.css"rel="stylesheet"></link> -->
+    
+    <script>
+        fetch("./header.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+        });
+
+        fetch("./footer.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector(".footer").innerHTML = data;
+        });
+  </script>
+  </head>
+
+  <body>
+      <header></header>
+      <hr class="header-divider" />
+
+    <main> 
+
+        
+
+    <aside class="sidebar-container">
+      <div class="sidebar">
+          <ul>
+          </ul>
+      </div>
+    </aside>
+
+    <article>
+        <section class="cart-section">
+            <header class="cart-header">
+              <h3>My Cart(<span class="cart-item-number">0</span>&nbsp;item)</h3>
+            </header>
+            <div class="cart-container">
+                <div class="cart-empty-text">
+                    <h3>No items in your cart</h3>
+                    <p>Your favourite items are just a click away</p>
+                  </div>;
+            </div>
+      
+            <footer class="cart-footer">
+              <p>Promo code can be applied on payment page</p>
+              <button>
+                Proceed to Checkout <span class="cart-total-cost">0</span>
+              </button>
+            </footer>
+          </section>
+    <section class="product-list">
+    </section>
+</article>
+
+</main>
+
+<footer class="footer"></footer>
+
+<script src="products.js" defer async></script> 
+  </body>
+</html>
